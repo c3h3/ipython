@@ -399,14 +399,19 @@ var IPython = (function (IPython) {
             async : false,
             success : function (data, status, xhr) {
                 var notebook_name = data.name;
-                window.open(
-                    utils.url_join_encode(
+                window.location = utils.url_join_encode(
                         base_url,
                         'notebooks',
                         path,
-                        notebook_name),
-                    '_blank'
-                );
+                        notebook_name);
+                // window.open(
+                //     utils.url_join_encode(
+                //         base_url,
+                //         'notebooks',
+                //         path,
+                //         notebook_name),
+                //     '_blank'
+                // );
             },
             error : $.proxy(this.new_notebook_failed, this),
         };
