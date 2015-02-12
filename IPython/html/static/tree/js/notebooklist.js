@@ -241,7 +241,8 @@ var IPython = (function (IPython) {
                     path,
                     nbname
                 )
-            ).attr('target','_blank');
+            );
+            // .attr('target','_blank');
     };
 
 
